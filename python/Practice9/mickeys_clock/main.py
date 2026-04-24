@@ -9,9 +9,9 @@ pygame.init()
 weight, height = 1000, 1000
 screen = pygame.display.set_mode((weight, height))
 clock = pygame.time.Clock()
-dial = pygame.image.load("images\clock.png")
-right_hand = pygame.image.load("images\mickey_hand_right.png")
-left_hand = pygame.image.load("images\mickey_hand_left.png")
+dial = pygame.image.load("images/clock.png")
+right_hand = pygame.image.load("images/mickey_hand_right.png")
+left_hand = pygame.image.load("images/mickey_hand_left.png")
 dial = pygame.transform.scale(dial, (1000, 1000))
 right_hand = pygame.transform.scale(right_hand, (600, 150))
 left_hand = pygame.transform.scale(left_hand, (600, 150))
@@ -23,7 +23,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     angle += -6
-    angle2 += -1/7
+    angle2 += -0.1
     rotated_right_hand = pygame.transform.rotate(right_hand, angle)
     rotated_left_hand = pygame.transform.rotate(left_hand, angle2)
     rect = rotated_right_hand.get_rect(center = (500, 500))

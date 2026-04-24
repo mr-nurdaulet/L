@@ -58,8 +58,8 @@ while running:
         if event.type == end:
             i = True
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
-            pygame.mixer.music.load(L[p])
             if pause_playing_rect.collidepoint(event.pos):
+                pygame.mixer.music.load(L[p])
                 if i:
                     i = False
                     pygame.mixer.music.play()
